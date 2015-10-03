@@ -1,0 +1,77 @@
+set nonu
+set bs=2
+set ts=3
+set shiftwidth=3
+set wildmode=list:longest
+set incsearch
+let b:match_words = '\<module\>:\<endmodule\>,\<begin\>:\<end\>,\<if\>:\<else\>,\<case\>:\<endcase\>'
+command! -nargs=0 MKLINSTANCE :/\(\(^ \{2,3\}[_a-z0-9]\+\w\+\|^module\|^ \{2,3\}[_A-Z0-9]\{1,\}\w\{0,\}\)\s\+\w\+\s\{0,\}(\)\@=)
+command! -nargs=0 CE :colorscheme evening
+map + <c-w>+
+map _ <c-w>-
+map < <c-w><
+map > <c-w>>
+
+"sjtusonic:
+set backspace=indent,eol,start
+set laststatus=2
+"set backspace=start
+set ai
+set si
+map qq:q <cr>
+map ww:w! <cr>
+map zz:x! <cr>
+map ee:e! <cr>
+
+colorscheme delek
+
+"if (getcwd()!~"some_dir_name")
+"    do_something
+"endif
+
+set nowrapscan
+
+
+set isk=@,48-57,_,192-255,/
+
+source $VIMRUNTIME/macros/matchit.vim
+let loaded_matchparen = 1
+let b:match_words = '\<module\>:\<endmodule\>,\<begin\>:\<end\>,\<if\>:\<else\>,\<case\>:\<endcase\>'
+
+map zjctab :%s,^\t,   ,
+
+inoremap {{ {}<left><CR><ESC>3<left>3xO
+""inoremap {{ {}<left><CR><ESC>3<left><ESC>xO
+"
+inoremap { {}<left>
+inoremap [ []<left>
+inoremap ( ()<left>
+inoremap < <><left>
+inoremap " ""<left>
+inoremap ' ''<left>
+
+set ts=3
+set softtabstop=3
+set expandtab
+%retab!
+
+" PYTHON:
+if (expand('%:e')=~"py")
+    set ts=4
+    set expandtab
+    %retab!
+endif
+
+if (expand('%:e')=~"tcl")
+    set ts=3
+    set softtabstop=3
+    set expandtab
+    %retab!
+endif
+
+" Tlsit feature:
+if has('gui_running')
+    let Tlist_Auto_Open = 0
+else
+    " non-gvim stuff
+endif
