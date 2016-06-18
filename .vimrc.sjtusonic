@@ -38,36 +38,36 @@ source $VIMRUNTIME/macros/matchit.vim
 let loaded_matchparen = 1
 let b:match_words = '\<module\>:\<endmodule\>,\<begin\>:\<end\>,\<if\>:\<else\>,\<case\>:\<endcase\>'
 
-map zjctab :%s,^\t,   ,
+""map zjctab :%s,^\t,   ,
 
 inoremap {{ {}<left><CR><ESC>3<left>3xO
 ""inoremap {{ {}<left><CR><ESC>3<left><ESC>xO
 "
-inoremap { {}<left>
-inoremap [ []<left>
-inoremap ( ()<left>
-inoremap < <><left>
-inoremap " ""<left>
-inoremap ' ''<left>
+""inoremap { {}<left>
+""inoremap [ []<left>
+""inoremap ( ()<left>
+""inoremap < <><left>
+""inoremap " ""<left>
+""inoremap ' ''<left>
 
-set ts=3
-set softtabstop=3
-set expandtab
-%retab!
+""set ts=3
+""set softtabstop=3
+""set expandtab
+""%retab!
 
-" PYTHON:
-if (expand('%:e')=~"py")
-    set ts=4
-    set expandtab
-    %retab!
-endif
-
-if (expand('%:e')=~"tcl")
-    set ts=3
-    set softtabstop=3
-    set expandtab
-    %retab!
-endif
+""" PYTHON:
+""if (expand('%:e')=~"py")
+""    set ts=4
+""    set expandtab
+""    %retab!
+""endif
+""
+""if (expand('%:e')=~"tcl")
+""    set ts=3
+""    set softtabstop=3
+""    set expandtab
+""    %retab!
+""endif
 
 " Tlsit feature:
 if has('gui_running')
