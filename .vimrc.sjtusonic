@@ -35,7 +35,7 @@ set nowrapscan
 set isk=@,48-57,_,192-255,/
 
 source $VIMRUNTIME/macros/matchit.vim
-let loaded_matchparen = 1
+"let loaded_matchparen = 1
 let b:match_words = '\<module\>:\<endmodule\>,\<begin\>:\<end\>,\<if\>:\<else\>,\<case\>:\<endcase\>'
 
 ""map zjctab :%s,^\t,   ,
