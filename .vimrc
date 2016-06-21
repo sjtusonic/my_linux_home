@@ -2,10 +2,9 @@ set hlsearch
 set incsearch
 set nowrapscan
 "set nocompatible
-set ai
 set showcmd
-set list
-set listchars=tab:>-,trail:-
+"set list
+"set listchars=tab:>-,trail:-
 nohl
 set ai
 set si
