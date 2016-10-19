@@ -50,6 +50,15 @@ inoremap {{ {}<left><CR><ESC>3<left>3xO
 ""inoremap " ""<left>
 ""inoremap ' ''<left>
 
+inoremap ,, <
+inoremap .. >
+inoremap 99 ()
+inoremap 00 )
+inoremap [[ {}
+inoremap ]] }
+
+inoremap class class NAME {<CR>public:<CR>NAME(){<CR>}<CR>~NAME(){<CR>}<CR>private:<CR>}
+inoremap cout  cout<<""<<<<""<<endl;<ESC>02f"i
 ""set ts=3
 ""set softtabstop=3
 ""set expandtab
@@ -75,3 +84,6 @@ if has('gui_running')
 else
     " non-gvim stuff
 endif
+
+set nu
+set relativenumber

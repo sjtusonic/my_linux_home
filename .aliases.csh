@@ -25,6 +25,7 @@ alias vd 'vimdiff'
 alias o 'cd ..'
 alias py 'python'
 alias gr 'grep --color'
+alias gre 'gr "^Err\|error" '
 alias zd '/usr/bin/du -h --max-depth=1'
 
 alias  k 'konsole &'
