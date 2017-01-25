@@ -87,3 +87,5 @@ endif
 
 set nu
 set relativenumber
+
+noremap = mzgg<C-V>G=`z
